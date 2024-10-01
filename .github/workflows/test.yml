@@ -1,0 +1,12 @@
+on: push
+
+jobs:
+  one:
+    runs-on: ubuntu-latest
+    steps:
+    - name: expression
+      run: echo "foo='$foo'; bar='$bar'; goz='$goz'"
+      env:
+        bar: 2
+        foo: ${{ join(fromJSON(format('[{0},{1}]','"hi"','"lo"')), '') }}
+        goz: ${{ join(fromJSON(format('[{1}]','"hi"','"lo"')), '')}}
