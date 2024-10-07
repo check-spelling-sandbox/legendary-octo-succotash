@@ -1,7 +1,7 @@
 on: push
 
 env:
-  SOMETHING: "1"
+  SOMETHING: ""
 
 jobs:
   one:
