@@ -9,4 +9,4 @@ jobs:
       env:
         bar: 2
         foo: ${{ join(fromJSON(format('[{0},{1}]','"hi"','"lo"')), '') }}
-        goz: ${{ fromJSON('[false,""]')[0==0] }}
+        goz: ${{ fromJSON('[false,""]')[1==2] }}
